@@ -1,0 +1,8 @@
+tensorflow~=2.12.1
+pysam~=0.21.0
+PyYAML~=6.0.1
+fastapi~=0.103.1
+pydantic
+uvicorn
+tensorflow-probability
+numpy
