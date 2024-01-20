@@ -23,6 +23,11 @@ class GenomeGenerator:
         genome = self._convert_sequences_to_symbolic_form(generated_data.numpy())
         return genome
 
+    def generate_genomes(self, amount):
+        noise = tf.random.normal([amount, self.latent_size])
+        generated_data = self.model(noise, training=False)
+        return generated_data.numpy()
+
     @staticmethod
     def _convert_sequences_to_symbolic_form(sequences):
         # def linear_conversion(value, a, b, old_a, old_b): return (((value - old_a) * (b - a)) / (old_b - old_a)) + a
