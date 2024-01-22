@@ -20,4 +20,4 @@ if __name__ == '__main__':
         row.extend(next(loader_iterator))
     validation_data = [x for xs in row for x in xs]
     ks_result = ks_2samp(generated_data, validation_data)
-    print(f"pvalue = 0.2899101")
+    print(f"pvalue = {ks_result.pvalue}")
